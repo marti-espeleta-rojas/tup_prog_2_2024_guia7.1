@@ -52,13 +52,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVer.Designer.cs">
+      <DependentUpon>FormVer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DniNoValidoException.cs" />
     <Compile Include="Models\DepartamentoVehicular.cs" />
+    <Compile Include="Models\FormatoPatenteNoValidaException.cs" />
     <Compile Include="Models\Persona.cs" />
     <Compile Include="Models\RegistroVehiculo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVer.resx">
+      <DependentUpon>FormVer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

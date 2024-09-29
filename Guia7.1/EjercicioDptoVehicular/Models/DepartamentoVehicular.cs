@@ -10,18 +10,21 @@ namespace EjercicioDptoVehicular.Models
     public class DepartamentoVehicular
     {
         public int CantidadRegistros { get; private set; }
-        ArrayList vehiculos;
+        private int serie;
+        List<RegistroVehiculo> registros = new List<RegistroVehiculo>();
         RegistroVehiculo vehi = null;
 
-        public RegistroVehiculo RegistrarVehiculo(string patente, Persona propietario, string serie)
+        public RegistroVehiculo RegistrarVehiculo(string patente, Persona propietario)
         {
-            vehi = new RegistroVehiculo(patente, serie, propietario);
-            vehiculos.Add(vehi);
+            vehi = new RegistroVehiculo(patente, propietario);
+            registros.Add(vehi);
+            return vehi;
         }
 
         public RegistroVehiculo VerRegistro(int idx)
         {
-
+            vehi = registros[idx];
+            return vehi;
         }
     }
 }

@@ -9,6 +9,7 @@ namespace EjercicioDptoVehicular.Models
     public class Persona
     {
         int dni;
+        public string Nombre { get; set; }
         public int DNI
         {
             get
@@ -17,24 +18,22 @@ namespace EjercicioDptoVehicular.Models
             }
             set
             {
-                if (dni>1000000)
-                {
-                    dni = value;
-                }
-                else
+                if (value<=1000000)//acá me confundía. Hice la comparación con dni y 
+                    //no me saltaba la excepción porque claro, dni nunca se pudo settear.
                 {
                     throw new DniNoValidoException();
                 }
+                else
+                {
+                    dni = value;
+                }
             }
         }
-        public string Nombre { get; set; }
-        public string Correo { get; set; }
 
-        public Persona(int dni, string nombre, string correo)
+        public Persona(int dni, string nombre)
         {
             DNI = dni;
             Nombre = nombre;
-            Correo = correo;
         }
     }
 }
